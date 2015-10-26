@@ -30,7 +30,7 @@ public class MeetingSchedulerController {
 		
 		@RequestMapping(value = "schedule", method = RequestMethod.POST)
 		public String roomCheck(Meeting meeting,Employee employee,Room room,ModelMap model) {
-		
+		//check the availibility of the room and the employees first
 		//book a time slot .cretae a new row in meeting table with meeting id.
 		
 		
