@@ -10,8 +10,14 @@ Date timeSlot ;
 private int  IntervireSchedulerId;
 private int leaderId;
 private int TeamId;
+private String meetingName;
 
-
+public String getMeetingName() {
+	return meetingName;
+}
+public void setMeetingName(String meetingName) {
+	this.meetingName = meetingName;
+}
 
 
 public int getMeetingId() {
