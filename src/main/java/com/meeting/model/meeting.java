@@ -8,7 +8,7 @@ private List<Integer> employeesId;
 private int roomId;
 Date timeSlot ;
 private int  IntervireSchedulerId;
-private int leader;
+private int leaderId;
 private int TeamId;
 
 
@@ -27,11 +27,11 @@ public List<Integer> getEmployeesId() {
 public void setEmployeesId(List<Integer> employeesId) {
 	this.employeesId = employeesId;
 }
-public int getLeader() {
-	return leader;
+public int getLeaderId() {
+	return leaderId;
 }
-public void setLeader(int leader) {
-	this.leader = leader;
+public void setLeaderId(int leaderId) {
+	this.leaderId = leaderId;
 }
 public int getRoomId() {
 	return roomId;
