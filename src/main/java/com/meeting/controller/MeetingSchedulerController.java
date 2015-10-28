@@ -34,17 +34,44 @@ public class MeetingSchedulerController {
 			return "RoomStatus";
 		}
 		
-		@RequestMapping(value = "/schedule", method = RequestMethod.POST)
+		@RequestMapping(value = "/employee/schedule", method = RequestMethod.POST)
 		public String schedulemeeting(Meeting meeting,Employee employee,Room room,ModelMap model) {
 			//Parse the JSON from the body of the post
 			//get the timeslot,Employee ID's and Room number to schedule a meeting
 			//Before scheduling a meeting check the availibility of Room and Employees
-				//Book a time slot .create a new row in meeting table and EmployeeMeetingwith meeting id.
+				//Book a time slot .create a new row in meeting table and EmployeeMeeting with meeting id.
 		
 		
 			model.addAttribute("status", meeting.msg.success);
 			return "Resource created";
 		}
+		
+		@RequestMapping(value = "/{timeSlot}/team/{ID}", method = RequestMethod.GET)
+		public String teamCheck(Team team,@PathVariable("timeSlot") Date timeSlot, @PathVariable("ID") int ID, ModelMap model) {
+		String status ;
+		//Check the availibility of Entire team from team table and meeting table
+		
+		//store the result of the team availibility status in status variable.
+		
+		
+			model.addAttribute("status", status);
+			return "TeamStatus";
+		}
+		
+		
+		@RequestMapping(value = "/team/schedule", method = RequestMethod.POST)
+		public String teamCheck(Team team,@PathVariable("timeSlot") Date timeSlot, @PathVariable("ID") int ID, ModelMap model) {
+		String status ;
+		//Parse the JSON from the body of the post
+			//get the timeslot,team ID,Employee ID's and Room number to schedule a meeting
+			//Before scheduling a meeting check the availibility of all the Employees in the team and also check availibility of Room 
+			//Book a time slot .create a new row in meeting table and EmployeeMeeting with meeting id.
+		
+			model.addAttribute("status", status);
+			return "Resource created";
+		}
+		
+		
 		
 		
 		
