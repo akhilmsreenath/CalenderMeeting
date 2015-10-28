@@ -36,6 +36,8 @@ public class MeetingSchedulerController {
 		
 		@RequestMapping(value = "/schedule", method = RequestMethod.POST)
 		public String schedulemeeting(Meeting meeting,Employee employee,Room room,ModelMap model) {
+			//Parse the JSON from the body of the post
+			//get the timeslot,Employee ID's and Room number to schedule a meeting
 			//Before scheduling a meeting check the availibility of Room and Employees
 				//Book a time slot .create a new row in meeting table and EmployeeMeetingwith meeting id.
 		
