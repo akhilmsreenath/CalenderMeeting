@@ -1,4 +1,3 @@
-
 import java.sql.Date;
 import java.util.List;
 
@@ -10,6 +9,10 @@ private int roomId;
 Date timeSlot ;
 private int  IntervireSchedulerId;
 private int leader;
+private int TeamId;
+
+
+
 
 public int getMeetingId() {
 	return meetingId;
@@ -48,6 +51,9 @@ public int getIntervireSchedulerId() {
 public void setIntervireSchedulerId(int IntervireSchedulerId) {
 	this.IntervireSchedulerId = IntervireSchedulerId;
 }
-
-
+public int getTeamId() {
+	return TeamId;
+}
+public void setTeamId(int teamId) {
+	TeamId = teamId;
 }
