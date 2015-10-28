@@ -35,7 +35,7 @@ public class MeetingSchedulerController {
 		}
 		
 		@RequestMapping(value = "/employee/schedule", method = RequestMethod.POST)
-		public String schedulemeeting(Meeting meeting,Employee employee,Room room,ModelMap model) {
+		public String employeeSchedule(Meeting meeting,Employee employee,Room room,ModelMap model) {
 			//Parse the JSON from the body of the post
 			//get the timeslot,Employee ID's and Room number to schedule a meeting
 			//Before scheduling a meeting check the availibility of Room and Employees
@@ -60,7 +60,7 @@ public class MeetingSchedulerController {
 		
 		
 		@RequestMapping(value = "/team/schedule", method = RequestMethod.POST)
-		public String teamCheck(Team team,@PathVariable("timeSlot") Date timeSlot, @PathVariable("ID") int ID, ModelMap model) {
+		public String teamSchedule(Meeting meeting,Employee employee,Room room,Team team, ModelMap model) {
 		String status ;
 		//Parse the JSON from the body of the post
 			//get the timeslot,team ID,Employee ID's and Room number to schedule a meeting
