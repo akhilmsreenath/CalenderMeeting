@@ -12,7 +12,7 @@ public class MeetingSchedulerController {
 
 
 
-		@RequestMapping(value = "/{timeSlot}/employee/{ID}", method = RequestMethod.GET)
+		@RequestMapping(value = "/time/{timeSlot}/employee/{ID}", method = RequestMethod.GET)
 		public String employeeCheck(Employee employee,@PathVariable("timeSlot") String timeSlot, @PathVariable("ID") int ID, ModelMap model) {
 		String status ;
 		DateTime myDate;
@@ -29,7 +29,7 @@ public class MeetingSchedulerController {
 			return "EmployeeStatus";
 		}
 		
-		@RequestMapping(value = "/{timeSlot}/room/{ID}", method = RequestMethod.GET)
+		@RequestMapping(value = "/time/{timeSlot}/room/{ID}", method = RequestMethod.GET)
 		public String roomCheck(Room room,@PathVariable("timeSlot")  Date timeSlot,@PathVariable("ID") int ID, ModelMap model) {
 		String status;
 		//Check the availibility of Room in meeting table  with particular Time Slot and room number.
@@ -51,7 +51,7 @@ public class MeetingSchedulerController {
 			return "Resource created";
 		}
 		
-		@RequestMapping(value = "/{timeSlot}/team/{ID}", method = RequestMethod.GET)
+		@RequestMapping(value = "/time/{timeSlot}/team/{ID}", method = RequestMethod.GET)
 		public String teamCheck(Team team,@PathVariable("timeSlot") String timeSlot, @PathVariable("ID") int ID, ModelMap model) {
 		String status ;
 			DateTime myDate;
