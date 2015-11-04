@@ -13,8 +13,13 @@ public class MeetingSchedulerController {
 
 
 		@RequestMapping(value = "/{timeSlot}/employee/{ID}", method = RequestMethod.GET)
-		public String employeeCheck(Employee employee,@PathVariable("timeSlot") Date timeSlot, @PathVariable("ID") int ID, ModelMap model) {
+		public String employeeCheck(Employee employee,@PathVariable("timeSlot") String timeSlot, @PathVariable("ID") int ID, ModelMap model) {
 		String status ;
+		DateTime myDate;
+    if (!string.IsNullOrEmpty(timeSlot))
+    {
+        myDate = DateTime.Parse(timeSlot.Replace("!", ":"));
+    }
 		//Check the availibility of Each Employee in meeting table and EmployeeMeeting table with particular Time Slots and EmployeeId
 		
 		//store the result of the Employee status in status variable.
@@ -47,8 +52,13 @@ public class MeetingSchedulerController {
 		}
 		
 		@RequestMapping(value = "/{timeSlot}/team/{ID}", method = RequestMethod.GET)
-		public String teamCheck(Team team,@PathVariable("timeSlot") Date timeSlot, @PathVariable("ID") int ID, ModelMap model) {
+		public String teamCheck(Team team,@PathVariable("timeSlot") String timeSlot, @PathVariable("ID") int ID, ModelMap model) {
 		String status ;
+			DateTime myDate;
+    if (!string.IsNullOrEmpty(timeSlot))
+    {
+        myDate = DateTime.Parse(timeSlot.Replace("!", ":"));
+    }
 		//Check the availibility of Entire team from team table and meeting table
 		
 		//store the result of the team availibility status in status variable.
