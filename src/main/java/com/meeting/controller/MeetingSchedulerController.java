@@ -39,17 +39,7 @@ public class MeetingSchedulerController {
 			return "RoomStatus";
 		}
 		
-		@RequestMapping(value = "/employee/schedule", method = RequestMethod.POST)
-		public String employeeSchedule(Meeting meeting,Employee employee,Room room,ModelMap model) {
-			//Parse the JSON from the body of the post
-			//get the timeslot,Employee ID's and Room number to schedule a meeting
-			//Before scheduling a meeting check the availibility of Room and Employees
-				//Book a time slot .create a new row in meeting table and EmployeeMeeting with meeting id.
-		
-		
-			model.addAttribute("status", meeting.msg.success);
-			return "Resource created";
-		}
+
 		
 		@RequestMapping(value = "/time/{timeSlot}/team/{ID}", method = RequestMethod.GET)
 		public String teamCheck(Team team,@PathVariable("timeSlot") String timeSlot, @PathVariable("ID") int ID, ModelMap model) {
