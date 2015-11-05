@@ -4,9 +4,9 @@ import java.util.List;
 
 public class meeting {
 private int meetingId;
-private List<Integer> employeesId;
+
 private int roomId;
-Date timeSlot ;
+private Date timeSlot ;
 private int  IntervireSchedulerId;
 private int leaderId;
 private int TeamId;
@@ -27,12 +27,7 @@ public void setMeetingId(int meetingId) {
 	this.meetingId = meetingId;
 }
 
-public List<Integer> getEmployeesId() {
-	return employeesId;
-}
-public void setEmployeesId(List<Integer> employeesId) {
-	this.employeesId = employeesId;
-}
+
 public int getLeaderId() {
 	return leaderId;
 }
